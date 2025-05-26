@@ -182,16 +182,17 @@ nav .navlinks li :hover {
   transform: scale(1.1);
 }
 /* Sections Styling */
-#home{
+#home {
   padding-top: 5%;
   padding-left: 10%;
 }
+
 .banner {
   position: relative;
   height: 60vh;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Align content to the left */
+  justify-content: space-between;
   color: white;
   padding: 0 10%;
   overflow: hidden;
@@ -200,32 +201,31 @@ nav .navlinks li :hover {
 
 .content {
   position: relative;
-  z-index: 2; /* Position above the image */
-  max-width: 50%; /* Limit text width */
+  z-index: 2;
+  max-width: 50%;
   text-align: left;
   background-color: rgb(17, 16, 16);
   padding: 20px;
   padding-left: 30px;
   margin-left: -80px;
   border-radius: 10px;
-  width : 800px;
+  width: 800px;
 }
 
 .banner .img {
   position: absolute;
-  left: 25%; /* Align the image to the right */
+  left: 25%;
   top: 60%;
   width: 100%;
   transform: translateY(-50%);
-  z-index: 1; /* Behind the text */
-  filter: blur(3px) brightness(0.9); /* Reduce blur for better visibility */
+  z-index: 1;
+  filter: blur(3px) brightness(0.9);
 }
 
 .banner .img img {
-  max-width: 60%; /* Adjust image size */
+  max-width: 60%;
   height: auto;
-  /* box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5); Add shadow for depth */
-  border-radius: 20px; /* Softens edges */
+  border-radius: 20px;
 }
 
 h1 {
@@ -241,7 +241,7 @@ h1 .front {
 
 h1 .developer {
   display: inline-block;
-  padding-left: 5%; /* Adjust positioning for alignment */
+  padding-left: 5%;
   color: white;
 }
 
@@ -603,9 +603,48 @@ svg{
   .navlinks.active {
     display: flex;
   }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .skill-box {
+    padding: 15px;
+  }
+
+  .skill-box h3 {
+    font-size: 16px;
+  }
+
+  .soft-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .soft-box {
+    padding: 15px;
+  }
+
+  .soft-box h3 {
+    font-size: 16px;
+  }
+
+  .soft-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stack-description,
+  .soft-description {
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
-/* Responsive adjustments for screens with max-width 450px */
 @media (max-width: 450px) {
   #home {
     padding-top: 5%;
@@ -616,9 +655,9 @@ svg{
     position: relative;
     height: 60vh;
     display: flex;
-    flex-direction: column; /* Stack content in a column for smaller screens */
+    flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center both text and image */
+    justify-content: center;
     color: white;
     padding: 0 10%;
     overflow: hidden;
@@ -628,20 +667,20 @@ svg{
   .content {
     position: relative;
     z-index: 2;
-    text-align: center; /* Center text for smaller screens */
-    background-color: rgba(17, 16, 16, 0.7); /* Add some transparency to the background */
+    text-align: center;
+    background-color: rgba(17, 16, 16, 0.7);
     padding: 20px;
-    width: 90%; /* Adjust width for smaller screens */
+    width: 90%;
     max-width: 800px;
     border-radius: 10px;
   }
   
   .banner .img {
     position: absolute;
-    left: 50%; /* Center image */
+    left: 50%;
     top: 60%;
     width: 100%;
-    transform: translateX(-50%) translateY(-50%); /* Center horizontally and vertically */
+    transform: translateX(-50%) translateY(-50%);
     z-index: 1;
     filter: blur(3px) brightness(0.9);
   }
@@ -673,69 +712,84 @@ svg{
     font-size: 1.2rem;
     margin-top: 1rem;
   }
-  
-  /* Media Query for max width 450px */
 
-
-  @media (max-width: 450px) {
-    nav .toggle-button{
-      text-align: center;    
-    }
-    .banner {
-      display: flex;
-      flex-direction: column;
-      padding: 10;
-      height: auto;
-      justify-content: center;
-    }
-  
-    .content {
-      padding: 15px;
-      width: 100%;
-      top: 50px;
-      margin-left: -25px; /* Remove margin for smaller screens */
-      text-align: center;
-    }
-  
-    .banner .img {
-      position: relative;
-      width: 100%;
-      transform: none;
-      left: 0;
-      top: 0;
-    }
-  
-    .banner .img img {
-      max-width: 90%;
-      margin: 0 auto;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 1rem;
-    }
+  nav .toggle-button {
+    text-align: center;    
   }
-  
-  #about-me{
+
+  .banner {
     display: flex;
     flex-direction: column;
+    padding: 10;
+    height: auto;
     justify-content: center;
   }
-  .about-wrapper{
-    display: flex;
-    flex-direction: column;
-  }
-  .about-image{
-    width: 100px;
-  }
-  .about-content{
+
+  .content {
+    padding: 15px;
+    width: 100%;
+    top: 50px;
+    margin-left: -25px;
     text-align: center;
-    font-size: 10px;
   }
-  
+
+  .banner .img {
+    position: relative;
+    width: 100%;
+    transform: none;
+    left: 0;
+    top: 0;
+  }
+
+  .banner .img img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #about-me {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  svg {
+    width: 250px;
+  }
+
+  .about-content {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 12px;
+  }
+
+  #about-me h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 
   #stack-section{
     text-align: center;
@@ -744,37 +798,73 @@ svg{
     text-align: center;
   }
 
-  .skills-container{
-    display: grid;
-    grid-template-columns: repeat(2,100px);
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 10px;
   }
-  .skill-box{
-    width: 100px;
+
+  .skill-box {
+    padding: 10px;
+    width: 100%;
   }
-  .skill-box h3{
-    font-size: 13px;
+
+  .skill-box h3 {
+    font-size: 12px;
     text-align: center;
   }
-  #soft-section h2{
-    font-size: 30px;
+
+  .progress-bar {
+    height: 8px;
   }
-  #soft-section p{
+
+  .percentage {
+    font-size: 11px;
+  }
+
+  .soft-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .soft-box {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .soft-box h3 {
+    font-size: 12px;
     text-align: center;
   }
-  .soft-container{
-    display: grid;
-    grid-template-columns: repeat(2,100px);
+
+  .soft-icon {
+    width: 30px;
+    height: 30px;
   }
-  .soft-box{
-    width: 100px;
+
+  .dot {
+    width: 8px;
+    height: 8px;
   }
-  .soft-box h3{
-    font-size: 13px;
+
+  .stack-description,
+  .soft-description {
+    font-size: 12px;
+    padding: 0 10px;
     text-align: center;
   }
-  #works{
+
+  #stack-section h2,
+  #soft-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  #works {
     text-align: center;
   }
+
   #repositories {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
     grid-template-rows: repeat(3, 1fr); /* 3 rows for smaller screens */
